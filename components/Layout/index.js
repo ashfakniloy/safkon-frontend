@@ -1,8 +1,11 @@
 import Head from "next/head";
+import Banner from "./Banner";
 import Footer from "./Footer";
 import Header from "./Header";
 
-function Layout({ children, title, description, keywords }) {
+function Layout({ children, pageDetails }) {
+  const { title, description, keywords, text, heading, img } = pageDetails;
+
   return (
     <div>
       <Head>
@@ -13,6 +16,7 @@ function Layout({ children, title, description, keywords }) {
 
       <div>
         <Header />
+        <Banner text={text} heading={heading} img={img} />
         {children}
         <Footer />
       </div>

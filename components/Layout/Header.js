@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
+import { MdKeyboardArrowDown, MdMenu, MdClose } from "react-icons/md";
 import { motion, useCycle } from "framer-motion";
 import AboutDropdown from "./AboutDropdown";
 import ServicesDropdown from "./ServicesDropdown";
@@ -28,12 +28,14 @@ function Header() {
           SAFCON
         </div> */}
         <div className="px-4 w-[150px] lg:w-[200px] h-[80px] lg:h-[127px]">
-          <Image
-            src="/images/logos/logo.png"
-            width={264}
-            height={191}
-            alt="safkon logo"
-          />
+          <Link href="/" passHref>
+            <Image
+              src="/images/logos/logo.png"
+              width={264}
+              height={191}
+              alt="safkon logo"
+            />
+          </Link>
         </div>
 
         <button
@@ -45,14 +47,14 @@ function Header() {
             animate={isOpen ? "initial" : "animate"}
             transition={{ duration: 0.5 }}
           >
-            <FaBars className={!isOpen ? "block" : "hidden"} />
+            <MdMenu className={!isOpen ? "block text-3xl" : "hidden"} />
           </motion.div>
           <motion.div
             variants={button}
             animate={isOpen ? "animate" : "initial"}
             transition={{ duration: 0.5 }}
           >
-            <FaTimes className={isOpen ? "block" : "hidden"} />
+            <MdClose className={isOpen ? "block text-3xl" : "hidden"} />
           </motion.div>
         </button>
 
@@ -68,10 +70,10 @@ function Header() {
             onMouseEnter={() => setShowAbout(true)}
             onMouseLeave={() => setShowAbout(false)}
           >
-            <a className="hover:text-custom-red transition duration-200 flex items-center gap-1 ">
+            <a className="hover:text-custom-red transition duration-200 flex items-center">
               About
-              <span>
-                <FaAngleDown />
+              <span className="text-xl">
+                <MdKeyboardArrowDown />
               </span>
             </a>
 
@@ -83,10 +85,10 @@ function Header() {
             onMouseEnter={() => setShowServices(true)}
             onMouseLeave={() => setShowServices(false)}
           >
-            <a className="hover:text-custom-red transition duration-200 flex items-center gap-1 ">
+            <a className="hover:text-custom-red transition duration-200 flex items-center">
               Services
-              <span>
-                <FaAngleDown />
+              <span className="text-xl">
+                <MdKeyboardArrowDown />
               </span>
             </a>
 

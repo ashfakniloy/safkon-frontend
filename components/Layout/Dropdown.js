@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { FaAngleDown } from "react-icons/fa";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { motion } from "framer-motion";
 
 function Dropdown({ isOpen }) {
@@ -24,39 +24,61 @@ function Dropdown({ isOpen }) {
       animate={isOpen ? "animate" : "initial"}
       transition={{ duration: 0.2 }}
     >
-      <div className="flex flex-col justify-center items-center gap-4 font-bold tracking-widest text-[18px] uppercase">
+      <div className="flex flex-col justify-center items-center gap-4 font-bold tracking-widest text-[16px] uppercase">
         <Link href="/" passHref>
           <a className="hover:text-custom-red transition duration-200">Home</a>
         </Link>
 
         <div
-          className="cursor-pointer"
-          onMouseEnter={() => setShowAbout(true)}
-          onMouseLeave={() => setShowAbout(false)}
+          className="cursor-pointer flex flex-col items-center gap-2"
+          onClick={() => setShowAbout(!showAbout)}
         >
-          <a className="hover:text-custom-red transition duration-200 flex items-center gap-1 ">
+          <a className="relative hover:text-custom-red transition duration-200 flex items-center">
             About
-            <span>
-              <FaAngleDown />
+            <span
+              className={`text-xl absolute -right-5 ${
+                showAbout && "rotate-180 transition duration-300"
+              }`}
+            >
+              <MdKeyboardArrowDown />
             </span>
           </a>
 
-          {/* {showAbout && <AboutDropdown />} */}
+          {showAbout && (
+            <div className="mt-2 mb-8 flex flex-col justify-center items-center gap-3">
+              <Link href="/about-us">Who we are</Link>
+              <Link href="/industries-we-serve">Industries we serve</Link>
+              <Link href="/locations">Locations</Link>
+            </div>
+          )}
         </div>
 
         <div
-          className="cursor-pointer"
-          onMouseEnter={() => setShowServices(true)}
-          onMouseLeave={() => setShowServices(false)}
+          className=" cursor-pointer flex flex-col items-center"
+          onClick={() => setShowServices(!showServices)}
         >
-          <a className="hover:text-custom-red transition duration-200 flex items-center gap-1 ">
+          <a className="relative hover:text-custom-red transition duration-200 flex items-center">
             Services
-            <span>
-              <FaAngleDown />
+            <span
+              className={`text-xl absolute -right-5 ${
+                showServices && "rotate-180 transition duration-300"
+              }`}
+            >
+              <MdKeyboardArrowDown />
             </span>
           </a>
 
-          {/* {showServices && <ServicesDropdown />} */}
+          {showServices && (
+            <div className="mt-2 mb-8 flex flex-col justify-center items-center gap-3">
+              <Link href="#">Transport industry</Link>
+              <Link href="#">Construction industry</Link>
+              <Link href="#">Food industry</Link>
+              <Link href="#">Energy industry</Link>
+              <Link href="#">News media industry</Link>
+              <Link href="#">Manufacturing industry</Link>
+              <Link href="#">Mining industry</Link>
+            </div>
+          )}
         </div>
 
         <Link href="/" passHref>

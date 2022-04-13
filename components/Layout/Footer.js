@@ -19,7 +19,7 @@ function Footer() {
           />
         </div>
 
-        <p className="mt-5 lg:mt-10 pb-10 border-b border-gray-400 text-center text-[14px] text-custom-red">
+        <p className="mt-5 lg:mt-10 pb-10 border-b border-slate-400 text-center text-[14px] text-custom-red">
           TWIC Homeland Security, OSHA, MSHA, Avetta, Mid Atlantic Safety
           Council, ISN, Browz
         </p>

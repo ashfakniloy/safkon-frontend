@@ -5,10 +5,19 @@ import Locations from "../components/Home/Locations";
 import Services from "../components/Home/Services";
 import Layout from "../components/Layout";
 
+const pageDetails = {
+  title: "Safkon industries ltd",
+  description: "description",
+  keywords: "keywords",
+  text: "INDUSTRY SERVICES CO INC",
+  heading: "Leader in Refractory Construction and Mechanical Services",
+  img: "/images/banners/home.jpg",
+};
+
 export default function Home() {
   return (
-    <Layout>
-      <HomeBanner />
+    <Layout pageDetails={pageDetails}>
+      {/* <HomeBanner /> */}
       <Description />
       <Services />
       <Locations />

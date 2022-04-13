@@ -8,18 +8,6 @@
   }
 }
 
-.heading-banner {
-  @apply font-Montserrat font-medium text-white text-[38px] lg:text-[70px] leading-none lg:leading-tight;
-}
-
 .heading-section {
   @apply font-Montserrat font-medium text-[28px] lg:text-[56px];
-}
-
-.text-banner {
-  @apply text-[14px] lg:text-[16px] text-custom-red font-bold tracking-widest uppercase;
-}
-
-.button {
-  @apply px-6 py-2 text-white hover:text-gray-300 text-[11px] tracking-widest font-bold bg-transparent border-2 border-white hover:border-gray-300 uppercase;
 }
