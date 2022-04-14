@@ -270,7 +270,7 @@ function Applicant() {
                   </div>
                   <div className="col-span-2">
                     <TextField
-                      label="If yes, give dates and details:"
+                      label="Summarize your special skills or qualifications:"
                       name="skills"
                       type="text"
                       textarea="true"
