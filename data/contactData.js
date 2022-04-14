@@ -1,0 +1,106 @@
+export const contactData = [
+  {
+    id: 0,
+    name: "REFRACTORY & GENERAL SERVICES",
+    contacts: [
+      {
+        id: 0,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+      {
+        id: 1,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+      {
+        id: 2,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+      {
+        id: 3,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+      {
+        id: 4,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+      {
+        id: 5,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: "MECHANICAL SERVICES",
+    contacts: [
+      {
+        id: 0,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+      {
+        id: 1,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "FIELD TANK SERVICES",
+    contacts: [
+      {
+        id: 0,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "FABRICATION SERVICES",
+    contacts: [
+      {
+        id: 0,
+        agent: "SHAWN HUNTER",
+        road: "6265 Rangeline Rd",
+        city: "Theodore, AL 36582",
+        phone: "(251) 443-6900",
+        email: "shunter@industrysci.com",
+      },
+    ],
+  },
+];

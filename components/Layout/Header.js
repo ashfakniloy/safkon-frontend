@@ -22,21 +22,21 @@ function Header() {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="container px-4 py-3 lg:py-[40px] flex justify-between items-center">
         {/* <div className="text-5xl font-Montserrat font-bold text-custom-blue">
           SAFCON
         </div> */}
-        <div className="px-4 w-[150px] lg:w-[200px] h-[80px] lg:h-[127px]">
-          <Link href="/" passHref>
+        <Link href="/" passHref>
+          <div className="px-4 w-[150px] lg:w-[200px] h-[80px] lg:h-[127px]">
             <Image
               src="/images/logos/logo.png"
               width={264}
               height={191}
               alt="safkon logo"
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
 
         <button
           className="lg:hidden bg-transparent text-custom-orange text-xl p-2"
@@ -95,24 +95,24 @@ function Header() {
             {showServices && <ServicesDropdown />}
           </div>
 
-          <Link href="/" passHref>
+          <Link href="/safety-quality" passHref>
             <a className="hover:text-custom-red transition duration-200">
               Safety & quality
             </a>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/contact-us" passHref>
             <a className="hover:text-custom-red transition duration-200">
               Contact us
             </a>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/job-opportunities" passHref>
             <a className="hover:text-custom-red transition duration-200">
               Job opportunities
             </a>
           </Link>
         </div>
       </div>
-      <Dropdown isOpen={isOpen} />
+      <Dropdown isOpen={isOpen} toggleOpen={toggleOpen} />
     </div>
   );
 }

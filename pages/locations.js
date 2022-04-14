@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import { locations } from "../data/locations";
 
 const pageDetails = {
-  title: "Locations page",
+  title: "Locations",
   description: "description",
   keywords: "keywords",
   text: "locations",

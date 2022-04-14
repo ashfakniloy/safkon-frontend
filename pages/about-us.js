@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 
 const pageDetails = {
-  title: "About page",
+  title: "About us",
   description: "description",
   keywords: "keywords",
   text: "Who we are",

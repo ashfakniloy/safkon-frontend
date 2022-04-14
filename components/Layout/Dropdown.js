@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 
 function Dropdown({ isOpen }) {
@@ -9,20 +9,20 @@ function Dropdown({ isOpen }) {
 
   const fade = {
     initial: {
-      opacity: 0,
+      scale: 0,
     },
     animate: {
-      opacity: 1,
+      scale: 1,
     },
   };
 
   return (
     <motion.div
-      className="absolute z-10 lg:hidden w-full h-[90%] bg-custom-gray flex flex-col justify-center items-center"
+      className="absolute origin-top-right z-40 lg:hidden w-full h-[90%] bg-custom-gray flex flex-col justify-center items-center"
       variants={fade}
       initial={false}
       animate={isOpen ? "animate" : "initial"}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.1 }}
     >
       <div className="flex flex-col justify-center items-center gap-4 font-bold tracking-widest text-[16px] uppercase">
         <Link href="/" passHref>
@@ -81,17 +81,17 @@ function Dropdown({ isOpen }) {
           )}
         </div>
 
-        <Link href="/" passHref>
+        <Link href="/safety-quality" passHref>
           <a className="hover:text-custom-red transition duration-200">
             Safety & quality
           </a>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/contact-us" passHref>
           <a className="hover:text-custom-red transition duration-200">
             Contact us
           </a>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/job-opportunities" passHref>
           <a className="hover:text-custom-red transition duration-200">
             Job opportunities
           </a>
