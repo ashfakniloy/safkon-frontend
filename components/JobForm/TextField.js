@@ -7,11 +7,20 @@ function TextField({ label, ...props }) {
     <div className="mb-2">
       <label htmlFor={field.name}>{label}</label>
       <div className="my-2">
-        <input
-          className="p-2 w-full outline-none border border-slate-300 focus:border-custom-red"
-          {...field}
-          {...props}
-        />
+        {props.textarea ? (
+          <textarea
+            className="p-2 w-full outline-none border border-slate-300 focus:border-custom-red"
+            rows="3"
+            {...field}
+            {...props}
+          />
+        ) : (
+          <input
+            className="p-2 w-full outline-none border border-slate-300 focus:border-custom-red"
+            {...field}
+            {...props}
+          />
+        )}
       </div>
     </div>
   );

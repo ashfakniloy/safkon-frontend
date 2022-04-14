@@ -1,6 +1,6 @@
-import { useField, Field } from "formik";
+import { useField } from "formik";
 
-function CheckboxField({ label, ...props }) {
+function OptionField({ label, ...props }) {
   const [field, meta] = useField(props);
 
   return (
@@ -13,4 +13,4 @@ function CheckboxField({ label, ...props }) {
   );
 }
 
-export default CheckboxField;
+export default OptionField;
