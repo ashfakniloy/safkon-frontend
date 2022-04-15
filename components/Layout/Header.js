@@ -23,7 +23,7 @@ function Header() {
 
   return (
     <div>
-      <div className="relative bg-custom-gray z-20 container px-4 py-5 lg:py-[40px] flex justify-between items-center">
+      <div className="relative bg-custom-gray z-50 container px-4 py-5 lg:py-[40px] flex justify-between items-center">
         {/* <div className="text-5xl font-Montserrat font-bold text-custom-blue">
           SAFCON
         </div> */}

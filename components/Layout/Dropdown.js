@@ -9,7 +9,7 @@ function Dropdown({ isOpen }) {
 
   const fade = {
     initial: {
-      y: "-100vh",
+      y: "-70vh",
     },
     animate: {
       y: 0,
@@ -18,7 +18,7 @@ function Dropdown({ isOpen }) {
 
   return (
     <motion.div
-      className="absolute z-10 lg:hidden w-screen h-[90%] bg-custom-gray flex flex-col justify-center items-center gap-4 font-bold tracking-widest text-[16px] uppercase"
+      className="absolute z-40 lg:hidden w-screen h-auto py-24 bg-custom-gray flex flex-col justify-center items-center gap-4 font-bold tracking-widest text-[15px] uppercase"
       variants={fade}
       initial={false}
       animate={isOpen ? "animate" : "initial"}
@@ -44,7 +44,7 @@ function Dropdown({ isOpen }) {
         </p>
 
         {showAbout && (
-          <div className="mt-2 mb-8 flex flex-col justify-center items-center gap-3">
+          <div className="mt-2 mb-4 flex flex-col justify-center items-center gap-3">
             <Link href="/about-us">Who we are</Link>
             <Link href="/industries-we-serve">Industries we serve</Link>
             <Link href="/locations">Locations</Link>
@@ -68,7 +68,7 @@ function Dropdown({ isOpen }) {
         </p>
 
         {showServices && (
-          <div className="mt-2 mb-8 flex flex-col justify-center items-center gap-3">
+          <div className="mt-2 mb-4 flex flex-col justify-center items-center gap-3">
             <Link href="#">Transport industry</Link>
             <Link href="#">Construction industry</Link>
             <Link href="#">Food industry</Link>
