@@ -9,7 +9,7 @@ function Dropdown({ isOpen }) {
 
   const fade = {
     initial: {
-      y: "-70vh",
+      y: "-120vh",
     },
     animate: {
       y: 0,
