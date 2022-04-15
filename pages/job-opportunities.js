@@ -1,4 +1,4 @@
-import Applicant from "../components/JobForm/Applicant";
+import Applicant from "../components/Form/Applicant";
 import Layout from "../components/Layout";
 
 const pageDetails = {

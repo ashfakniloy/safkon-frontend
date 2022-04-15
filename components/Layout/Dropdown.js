@@ -33,7 +33,7 @@ function Dropdown({ isOpen }) {
           className="cursor-pointer flex flex-col items-center gap-2"
           onClick={() => setShowAbout(!showAbout)}
         >
-          <a className="relative hover:text-custom-red transition duration-200 flex items-center">
+          <p className="relative hover:text-custom-red transition duration-200 flex items-center">
             About
             <span
               className={`text-xl absolute -right-5 ${
@@ -42,7 +42,7 @@ function Dropdown({ isOpen }) {
             >
               <MdKeyboardArrowDown />
             </span>
-          </a>
+          </p>
 
           {showAbout && (
             <div className="mt-2 mb-8 flex flex-col justify-center items-center gap-3">
@@ -57,7 +57,7 @@ function Dropdown({ isOpen }) {
           className=" cursor-pointer flex flex-col items-center"
           onClick={() => setShowServices(!showServices)}
         >
-          <a className="relative hover:text-custom-red transition duration-200 flex items-center">
+          <p className="relative hover:text-custom-red transition duration-200 flex items-center">
             Services
             <span
               className={`text-xl absolute -right-5 ${
@@ -66,7 +66,7 @@ function Dropdown({ isOpen }) {
             >
               <MdKeyboardArrowDown />
             </span>
-          </a>
+          </p>
 
           {showServices && (
             <div className="mt-2 mb-8 flex flex-col justify-center items-center gap-3">

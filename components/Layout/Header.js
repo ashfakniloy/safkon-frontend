@@ -40,6 +40,7 @@ function Header() {
 
         <button
           className="lg:hidden bg-transparent text-custom-orange text-xl p-2"
+          aria-label="toggle"
           onClick={() => toggleOpen()}
         >
           <motion.div
@@ -70,12 +71,12 @@ function Header() {
             onMouseEnter={() => setShowAbout(true)}
             onMouseLeave={() => setShowAbout(false)}
           >
-            <a className="hover:text-custom-red transition duration-200 flex items-center">
+            <p className="hover:text-custom-red transition duration-200 flex items-center">
               About
               <span className="text-xl">
                 <MdKeyboardArrowDown />
               </span>
-            </a>
+            </p>
 
             {showAbout && <AboutDropdown />}
           </div>
@@ -85,12 +86,12 @@ function Header() {
             onMouseEnter={() => setShowServices(true)}
             onMouseLeave={() => setShowServices(false)}
           >
-            <a className="hover:text-custom-red transition duration-200 flex items-center">
+            <p className="hover:text-custom-red transition duration-200 flex items-center">
               Services
               <span className="text-xl">
                 <MdKeyboardArrowDown />
               </span>
-            </a>
+            </p>
 
             {showServices && <ServicesDropdown />}
           </div>

@@ -1,27 +1,22 @@
 import * as Yup from "yup";
-import { useFormik } from "formik";
+import { useFormik, Formik, Form } from "formik";
+import TextField from "../Form/TextField";
 
 function Contact() {
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: "",
-    },
+  const initialvalues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
 
-    validationSchema: Yup.object({
-      firstName: Yup.string().required("First Name is required"),
-      lastName: Yup.string().required("Last Name is required"),
-      email: Yup.string().required("Email is required"),
-      phone: Yup.string().required("Phone No is required"),
-      message: Yup.string().required("Message is required"),
-    }),
-
-    onSubmit: (values) => {
-      console.log(values);
-    },
+  const validate = Yup.object({
+    firstName: Yup.string().required("First Name is required"),
+    lastName: Yup.string().required("Last Name is required"),
+    email: Yup.string().required("Email is required"),
+    phone: Yup.string().required("Phone No is required"),
+    message: Yup.string().required("Message is required"),
   });
 
   return (
@@ -36,118 +31,62 @@ function Contact() {
         </p>
 
         <div className="mt-6">
-          <form onSubmit={formik.handleSubmit}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 text-[14px]">
-              <div className="relative mt-3 col-span-2 lg:col-span-1 flex flex-col">
-                <label htmlFor="name" className="cursor-pointer">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  value={formik.values.firstName}
-                  onChange={formik.handleChange}
-                  className="mt-1 p-2 outline-none border-2 border-gray-200 focus:border-custom-red"
-                />
-                {formik.errors.firstName ? (
-                  <p className="absolute left-0 -bottom-5 text-custom-red text-[12px]">
-                    {formik.errors.firstName}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
+          <Formik
+            initialValues={initialvalues}
+            validationSchema={validate}
+            onSubmit={(values, { resetForm }) => {
+              console.log("Submitted values", values);
+              resetForm();
+            }}
+          >
+            {(formik) => (
+              <Form>
+                <div className="grid grid-cols-2 text-sm gap-x-7 gap-y-5 md:gap-y-7">
+                  <div className="col-span-2 sm:col-span-1">
+                    <TextField
+                      label="First Name *"
+                      name="firstName"
+                      type="text"
+                    />
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <TextField
+                      label="Last Name *"
+                      name="lastName"
+                      type="text"
+                    />
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <TextField
+                      label="Email Address *"
+                      name="email"
+                      type="email"
+                    />
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <TextField label="Phone No *" name="phone" type="text" />
+                  </div>
+                  <div className="col-span-2">
+                    <TextField
+                      label="How Can We Help? *"
+                      name="message"
+                      type="text"
+                      textarea="true"
+                    />
+                  </div>
+                </div>
 
-              <div className="relative mt-3 col-span-2 lg:col-span-1 flex flex-col">
-                <label htmlFor="name" className="text-[14px] cursor-pointer">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  value={formik.values.lastName}
-                  onChange={formik.handleChange}
-                  className="mt-1 p-2 outline-none border-2 border-gray-200 focus:border-custom-red"
-                />
-                {formik.errors.lastName ? (
-                  <p className="absolute left-0 -bottom-5 text-custom-red text-[12px]">
-                    {formik.errors.lastName}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
-
-              <div className="relative mt-3 col-span-2 lg:col-span-1 flex flex-col">
-                <label htmlFor="email" className="text-[14px] cursor-pointer">
-                  Email Adress
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  className="mt-1 p-2 outline-none border-2 border-gray-200 focus:border-custom-red"
-                />
-                {formik.errors.email ? (
-                  <p className="absolute left-0 -bottom-5 text-custom-red text-[12px]">
-                    {formik.errors.email}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
-
-              <div className="relative mt-3 col-span-2 lg:col-span-1 flex flex-col">
-                <label htmlFor="phone" className="text-[14px] cursor-pointer">
-                  Phone No
-                </label>
-                <input
-                  type="text"
-                  id="phone"
-                  value={formik.values.phone}
-                  onChange={formik.handleChange}
-                  className="mt-1 p-2 outline-none border-2 border-gray-200 focus:border-custom-red"
-                />
-                {formik.errors.phone ? (
-                  <p className="absolute left-0 -bottom-5 text-custom-red text-[12px]">
-                    {formik.errors.phone}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
-
-              <div className="relative mt-3 col-span-2 flex flex-col">
-                <label htmlFor="message" className="text-[14px] cursor-pointer">
-                  How Can We Help?
-                </label>
-                <textarea
-                  id="message"
-                  value={formik.values.message}
-                  onChange={formik.handleChange}
-                  rows="5"
-                  className="mt-1 p-2 outline-none border-2 border-gray-200 focus:border-custom-red"
-                />
-                {formik.errors.message ? (
-                  <p className="absolute left-0 -bottom-5 text-custom-red text-[12px]">
-                    {formik.errors.message}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
-            </div>
-
-            <div className="mt-8 flex justify-start">
-              <button
-                type="submit"
-                className="px-9 py-4 border-2 border-custom-blue text-custom-blue text-[11px] tracking-widest font-bold bg-transparent hover:bg-custom-blue hover:text-white transition duration-300 uppercase"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+                <div className="mt-8 flex justify-start">
+                  <button
+                    type="submit"
+                    className="px-9 py-4 border-2 border-custom-blue text-custom-blue text-[11px] tracking-widest font-bold bg-transparent hover:bg-custom-blue hover:text-white transition duration-300 uppercase"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </div>

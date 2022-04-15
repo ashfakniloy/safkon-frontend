@@ -33,7 +33,7 @@ function Services() {
           })}
         </div>
         <div className="flex justify-end mt-8">
-          <button className="border-2 border-black px-8 lg:px-11 py-5 lg:py-6 hover:bg-black hover:text-white transition duration-300 text-[14px] lg:text-[18px] uppercase">
+          <button className="border-2 border-custom-blue px-8 lg:px-11 py-5 lg:py-6 hover:bg-custom-blue hover:text-white transition duration-300 text-[14px] lg:text-[18px] uppercase">
             All services
           </button>
         </div>

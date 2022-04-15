@@ -1,9 +1,51 @@
-import { Formik, Form } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import OptionField from "./OptionField";
 import TextField from "./TextField";
 
 function Applicant() {
+  const initialvalues = {
+    position: "",
+    location: [],
+    firstName: "",
+    lastName: "",
+    address1: "",
+    address2: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    country: "",
+    phone: "",
+    email: "",
+    startingDate: "",
+    services: "",
+    when: "",
+    supervisor: "",
+    documentation: "",
+    employmentType: [],
+    convicted: "",
+    conviction: "",
+    skills: "",
+  };
+
+  const validate = Yup.object({
+    location: Yup.array().min(1, "Atleast one location is required"),
+    firstName: Yup.string().required("First Name is required"),
+    lastName: Yup.string().required("Last Name is required"),
+    address1: Yup.string().required("Address 1 is required"),
+    address2: Yup.string().required("Address 2 is required"),
+    phone: Yup.string().required("Phone No is required"),
+    email: Yup.string().required("Email is required"),
+    startingDate: Yup.string().required("Date is required"),
+    services: Yup.string().required("One option is required"),
+    documentation: Yup.string().required("One option is required"),
+    employmentType: Yup.array().min(1, "Atleast one option is required"),
+    convicted: Yup.string().required("One option is required"),
+    skills: Yup.string().required(
+      "Any special skill or qualification is required"
+    ),
+  });
+
   return (
     <div className="mt-8">
       <div className=" p-4 bg-custom-gray5 ">
@@ -11,36 +53,16 @@ function Applicant() {
       </div>
       <div className="mt-5">
         <Formik
-          initialValues={{
-            position: "",
-            location: [],
-            firstName: "",
-            lastName: "",
-            address1: "",
-            address2: "",
-            city: "",
-            state: "",
-            zipCode: "",
-            country: "",
-            phone: "",
-            email: "",
-            startingDate: "",
-            services: "",
-            when: "",
-            supervisor: "",
-            documentation: "",
-            employmentType: [],
-            convicted: "",
-            conviction: "",
-            skills: "",
-          }}
-          onSubmit={(values) => {
-            console.log("Submitted values are", values);
+          initialValues={initialvalues}
+          validationSchema={validate}
+          onSubmit={(values, { resetForm }) => {
+            console.log("Submitted values", values);
+            resetForm();
           }}
         >
           {(formik) => (
             <Form>
-              <div className="grid grid-cols-2 gap-x-3 lg:gap-x-7 gap-y-7 text-sm">
+              <div className="grid grid-cols-2 gap-x-3 lg:gap-x-7 gap-y-5 lg:gap-y-7 text-sm">
                 <div className="col-span-2">
                   <TextField
                     label="Position you are applying for:"
@@ -49,7 +71,7 @@ function Applicant() {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 relative">
                   <p>Location(s) applying for: *</p>
                   <OptionField
                     name="location"
@@ -95,9 +117,9 @@ function Applicant() {
                   />
                   <OptionField
                     name="location"
-                    label=" Pocatello, ID"
+                    label="Pocatello, ID"
                     type="checkbox"
-                    value=" Pocatello, ID"
+                    value="Pocatello, ID"
                   />
                   <OptionField
                     name="location"
@@ -111,6 +133,9 @@ function Applicant() {
                     type="checkbox"
                     value="Pittsburg, PA"
                   />
+                  <p className="absolute -bottom-3 text-custom-red text-xs">
+                    <ErrorMessage name="location" />
+                  </p>
                 </div>
 
                 <div className="">
@@ -146,12 +171,12 @@ function Applicant() {
                   <TextField label="Country" name="country" type="text" />
                 </div>
                 <div className="">
-                  <TextField label="Phone *" name="phone" type="text" />
+                  <TextField label="Phone No *" name="phone" type="text" />
                 </div>
                 <div className="">
                   <TextField label="Email *" name="email" type="email" />
                 </div>
-                <div className="col-span-2 w-[45%] lg:w-1/4">
+                <div className="col-span-2 w-[48%] lg:w-1/4">
                   <TextField
                     label="Date Available to Start *"
                     name="startingDate"
@@ -159,7 +184,7 @@ function Applicant() {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 relative">
                   <p className="text-sm">
                     Have you ever worked for Industry Services? *
                   </p>
@@ -175,6 +200,9 @@ function Applicant() {
                     type="radio"
                     value="no"
                   />
+                  <p className="absolute -bottom-3 text-custom-red text-xs">
+                    <ErrorMessage name="services" />
+                  </p>
                 </div>
 
                 <div className="">
@@ -188,7 +216,7 @@ function Applicant() {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 relative">
                   <p className="text-sm">
                     Can you provide documentation that states you are eligible
                     to work in the United States? *
@@ -205,9 +233,12 @@ function Applicant() {
                     value="no"
                     type="radio"
                   />
+                  <p className="absolute -bottom-3 text-custom-red text-xs">
+                    <ErrorMessage name="documentation" />
+                  </p>
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 relative">
                   <p>Type of employment desired: *</p>
                   <OptionField
                     name="employmentType"
@@ -233,9 +264,12 @@ function Applicant() {
                     value="seasonal"
                     type="checkbox"
                   />
+                  <p className="absolute -bottom-3 text-custom-red text-xs">
+                    <ErrorMessage name="employmentType" />
+                  </p>
                 </div>
 
-                <div className="col-span-2">
+                <div className="col-span-2 relative">
                   <p>
                     Have you ever pleaded guilty, no contest or been convicted
                     of a crime? *
@@ -252,6 +286,9 @@ function Applicant() {
                     value="no"
                     type="radio"
                   />
+                  <p className="absolute -bottom-3 text-custom-red text-xs">
+                    <ErrorMessage name="convicted" />
+                  </p>
                 </div>
 
                 <div className="col-span-2">
