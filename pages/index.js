@@ -16,7 +16,6 @@ const pageDetails = {
 export default function Home() {
   return (
     <Layout pageDetails={pageDetails}>
-      {/* <HomeBanner /> */}
       <Description />
       <Services />
       <Locations />

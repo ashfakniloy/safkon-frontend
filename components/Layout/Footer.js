@@ -24,10 +24,10 @@ function Footer() {
           Council, ISN, Browz
         </p>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-2 text-sm text-custom-red ">
+        <div className="mt-12 flex flex-wrap justify-center gap-2 text-sm text-custom-red capitalize">
           <Link href="/">Home</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Transport industry</Link>
+          <Link href="#">Transport Industry</Link>
           <span className="text-slate-500">|</span>
           <Link href="#">Construction Industry</Link>
           <span className="text-slate-500">|</span>
@@ -42,7 +42,7 @@ function Footer() {
           <Link href="#">Mining Industry</Link>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2 text-sm text-custom-red ">
+        <div className="mt-10 flex flex-wrap justify-center gap-2 text-sm text-custom-red capitalize">
           <Link href="/about-us">Our History</Link>
           <span className="text-slate-500">|</span>
           <Link href="/industries-we-serve">Industries We Serve</Link>
