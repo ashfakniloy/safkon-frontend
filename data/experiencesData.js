@@ -1,4 +1,4 @@
-export const experiences = [
+export const experiencesData = [
   {
     id: 0,
     category: "Aluminiam",

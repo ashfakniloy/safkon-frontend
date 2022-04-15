@@ -18,7 +18,7 @@ function Dropdown({ isOpen }) {
 
   return (
     <motion.div
-      className="absolute origin-top-right z-40 lg:hidden w-full h-[90%] bg-custom-gray flex flex-col justify-center items-center"
+      className="absolute origin-top-right z-40 lg:hidden w-full h-full bg-custom-gray flex flex-col justify-center items-center"
       variants={fade}
       initial={false}
       animate={isOpen ? "animate" : "initial"}

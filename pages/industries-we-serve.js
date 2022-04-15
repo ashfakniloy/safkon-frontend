@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import { experiences } from "../data/experiences";
+import { experiencesData } from "../data/experiencesData";
 
 const pageDetails = {
   title: "Industries we serve",
@@ -14,7 +14,7 @@ function IndustriesPage() {
   return (
     <Layout pageDetails={pageDetails}>
       <div className="container w-full lg:w-[62%] my-12 lg:my-28 flex flex-col">
-        {experiences.map((experience) => {
+        {experiencesData.map((experience) => {
           return (
             <p
               key={experience.id}

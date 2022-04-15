@@ -19,37 +19,41 @@ function Footer() {
           />
         </div>
 
-        <p className="mt-5 lg:mt-10 pb-10 border-b border-slate-400 text-center text-[14px] text-custom-red">
+        <p className="mt-5 lg:mt-10 pb-12 border-b border-slate-400 text-center text-sm text-custom-red">
           TWIC Homeland Security, OSHA, MSHA, Avetta, Mid Atlantic Safety
           Council, ISN, Browz
         </p>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2 text-[13px] text-custom-red ">
+        <div className="mt-12 flex flex-wrap justify-center gap-2 text-sm text-custom-red ">
           <Link href="/">Home</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Refactory</Link>
+          <Link href="#">Transport industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Union Refactory</Link>
+          <Link href="#">Construction Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Mechanical</Link>
+          <Link href="#">Food Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Steel Fabrication</Link>
+          <Link href="#">Energy Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Field Tank</Link>
+          <Link href="#">News media Industry</Link>
+          <span className="text-slate-500">|</span>
+          <Link href="#">Manufacturing Industry</Link>
+          <span className="text-slate-500">|</span>
+          <Link href="#">Mining Industry</Link>
         </div>
 
-        <div className="mt-7 lg:mt-10 flex flex-wrap justify-center gap-2 text-[13px] text-custom-red ">
-          <Link href="#">Our History</Link>
+        <div className="mt-10 flex flex-wrap justify-center gap-2 text-sm text-custom-red ">
+          <Link href="/about-us">Our History</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Industries We Serve</Link>
+          <Link href="/industries-we-serve">Industries We Serve</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Safety</Link>
+          <Link href="/safety-quality">Safety</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Contact</Link>
+          <Link href="/contact-us">Contact</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Locations</Link>
+          <Link href="/locations">Locations</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Job opportunities</Link>
+          <Link href="/job-opportunities">Job opportunities</Link>
         </div>
 
         <p className="mt-7 lg:mt-10 mb-5 text-[13px] lg:text-[15px]">

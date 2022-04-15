@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { services } from "../../data/services";
+import { servicesData } from "../../data/servicesData";
 
 function Services() {
   return (
@@ -7,7 +7,7 @@ function Services() {
       <div className="border-t pt-8 border-slate-300">
         <h1 className="pl-5 heading-section uppercase">OUR SERVICES</h1>
         <div className="mt-8 flex flex-col lg:flex-row justify-center items-center gap-8 overflow-hidden">
-          {services.map((service) => {
+          {servicesData.map((service) => {
             return (
               <div
                 key={service.id}
@@ -20,8 +20,8 @@ function Services() {
                   height={600}
                   className="object-cover opacity-50 z-30"
                 />
-                <div className="absolute inset-0 z-30 flex flex-col justify-center items-center gap-4 lg:gap-6">
-                  <h2 className="text-4xl lg:text-5xl text-white">
+                <div className="absolute inset-0 z-30 flex flex-col justify-center items-center gap-3 lg:gap-5">
+                  <h2 className="text-[27px] lg:text-4xl text-white">
                     {service.name}
                   </h2>
                   <button className="px-6 py-2 text-white hover:text-gray-300 text-[11px] tracking-widest font-bold bg-transparent border-2 border-white hover:border-gray-300 uppercase">

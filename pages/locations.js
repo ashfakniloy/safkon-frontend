@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import { locations } from "../data/locations";
+import { locationsData } from "../data/locationsData";
 
 const pageDetails = {
   title: "Locations",
@@ -15,7 +15,7 @@ function LocationsPage() {
     <Layout pageDetails={pageDetails}>
       <div className="container px-4 my-10 lg:my-20">
         <div className="flex flex-col lg:flex-row justify-between gap-5">
-          {locations.map((location) => {
+          {locationsData.map((location) => {
             return (
               <div key={location.id}>
                 <p className="text-custom-red text-base lg:text-lg font-semibold pb-8 mb-10 border-b border-slate-400">
