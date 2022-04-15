@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { MdKeyboardArrowDown, MdClose } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { motion } from "framer-motion";
 
 function Dropdown({ isOpen }) {
@@ -69,20 +69,20 @@ function Dropdown({ isOpen }) {
 
         {showServices && (
           <div className="mt-2 mb-4 flex flex-col justify-center items-center gap-3">
-            <Link href="#">Transport industry</Link>
-            <Link href="#">Construction industry</Link>
-            <Link href="#">Food industry</Link>
-            <Link href="#">Energy industry</Link>
-            <Link href="#">News media industry</Link>
-            <Link href="#">Manufacturing industry</Link>
-            <Link href="#">Mining industry</Link>
+            <Link href="/transport-industry">Transport industry</Link>
+            <Link href="/construction-industry">Construction industry</Link>
+            <Link href="/food-industry">Food industry</Link>
+            <Link href="/energy-industry">Energy industry</Link>
+            <Link href="/news-media-industry">News media industry</Link>
+            <Link href="/manufacturing-industry">Manufacturing industry</Link>
+            <Link href="/mining-industry">Mining industry</Link>
           </div>
         )}
       </div>
 
       <Link href="/safety-quality" passHref>
         <a className="hover:text-custom-red transition duration-200">
-          Safety & quality
+          Safety &amp; quality
         </a>
       </Link>
       <Link href="/contact-us" passHref>

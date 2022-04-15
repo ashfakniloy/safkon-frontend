@@ -138,14 +138,14 @@ function Applicant() {
                   </p>
                 </div>
 
-                <div className="">
+                <div>
                   <TextField
                     label="First Name *"
                     name="firstName"
                     type="text"
                   />
                 </div>
-                <div className="">
+                <div>
                   <TextField label="Last Name *" name="lastName" type="text" />
                 </div>
                 <div className="col-span-2">
@@ -154,26 +154,26 @@ function Applicant() {
                 <div className="col-span-2">
                   <TextField label="Address 2 *" name="address2" type="text" />
                 </div>
-                <div className="">
+                <div>
                   <TextField label="City" name="city" type="text" />
                 </div>
-                <div className="">
+                <div>
                   <TextField label="State/Province" name="state" type="text" />
                 </div>
-                <div className="">
+                <div>
                   <TextField
                     label="Zip/Postal Code"
                     name="zipCode"
                     type="text"
                   />
                 </div>
-                <div className="">
+                <div>
                   <TextField label="Country" name="country" type="text" />
                 </div>
-                <div className="">
+                <div>
                   <TextField label="Phone No *" name="phone" type="text" />
                 </div>
-                <div className="">
+                <div>
                   <TextField label="Email *" name="email" type="email" />
                 </div>
                 <div className="col-span-2 w-[48%] lg:w-1/4">
@@ -205,10 +205,10 @@ function Applicant() {
                   </p>
                 </div>
 
-                <div className="">
+                <div>
                   <TextField label="If yes, when?" name="when" type="text" />
                 </div>
-                <div className="">
+                <div>
                   <TextField
                     label="Name of supervisor:"
                     name="supervisor"

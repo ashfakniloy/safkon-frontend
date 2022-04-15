@@ -98,7 +98,7 @@ function Header() {
 
           <Link href="/safety-quality" passHref>
             <a className="hover:text-custom-red transition duration-200">
-              Safety & quality
+              Safety &amp; quality
             </a>
           </Link>
           <Link href="/contact-us" passHref>
@@ -113,7 +113,7 @@ function Header() {
           </Link>
         </div>
       </div>
-      <Dropdown isOpen={isOpen} toggleOpen={toggleOpen} />
+      <Dropdown isOpen={isOpen} />
     </div>
   );
 }

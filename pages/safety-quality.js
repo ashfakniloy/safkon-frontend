@@ -36,7 +36,7 @@ function SafetyQualityPage() {
         <div className="mt-10 lg:mt-24">
           <table className="scale-75 sm:scale-100 origin-top-left table-auto border-collapse border border-custom-gray-3 text-center text-sm">
             <thead className="bg-custom-gray4 text-white">
-              <tr className="">
+              <tr>
                 <th className="p-3 border-collapse border border-custom-gray3">
                   Year
                 </th>

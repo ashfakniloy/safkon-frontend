@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Locations() {
   return (
@@ -9,8 +10,6 @@ function Locations() {
             <Image
               src="/images/locations.jpg"
               alt="locations"
-              // width={200}
-              // height={200}
               layout="fill"
               objectFit="cover"
               priority
@@ -18,18 +17,20 @@ function Locations() {
             />
             <div className="absolute inset-0 z-30 flex flex-col justify-center items-center gap-3 lg:gap-16">
               <h2 className="text-3xl lg:text-[80px] text-white">Locations</h2>
-              <button className="px-6 lg:px-11 py-2 lg:py-4 text-white text-[11px] lg:text-[21px] tracking-widest font-bold bg-transparent hover:text-gray-300 border-2 border-white hover:border-gray-300 uppercase">
-                Contact us
-              </button>
+              <Link href="/locations" passHref>
+                <button className="px-6 lg:px-11 py-2 lg:py-4 text-white text-[11px] lg:text-[21px] tracking-widest font-bold bg-transparent hover:text-gray-300 border-2 border-white hover:border-gray-300 uppercase">
+                  Contact us
+                </button>
+              </Link>
             </div>
           </div>
 
           <div className="lg:ml-[300px] mt-8 flex flex-col items-end gap-4 lg:gap-10 text-[20px] lg:text-3xl">
-            <p className="">Theodore, AL</p>
-            <p className="">Six Mile, SC</p>
-            <p className="">Summerville,SC</p>
-            <p className="">Lake City, FL</p>
-            <p className="">Ruston, LA</p>
+            <p>Theodore, AL</p>
+            <p>Six Mile, SC</p>
+            <p>Summerville,SC</p>
+            <p>Lake City, FL</p>
+            <p>Ruston, LA</p>
           </div>
         </div>
       </div>

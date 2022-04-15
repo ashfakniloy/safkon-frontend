@@ -11,7 +11,7 @@ export const safetyData = [
   },
   {
     id: 1,
-    year: "2021",
+    year: "2020",
     man_hours: "625,947",
     loss_owrkday_cases: "1",
     recordable_cases: "3",
@@ -21,7 +21,7 @@ export const safetyData = [
   },
   {
     id: 2,
-    year: "2021",
+    year: "2019",
     man_hours: "625,947",
     loss_owrkday_cases: "1",
     recordable_cases: "3",
@@ -31,7 +31,7 @@ export const safetyData = [
   },
   {
     id: 3,
-    year: "2021",
+    year: "2018",
     man_hours: "625,947",
     loss_owrkday_cases: "1",
     recordable_cases: "3",
@@ -41,7 +41,7 @@ export const safetyData = [
   },
   {
     id: 4,
-    year: "2021",
+    year: "2017",
     man_hours: "625,947",
     loss_owrkday_cases: "1",
     recordable_cases: "3",
@@ -51,7 +51,7 @@ export const safetyData = [
   },
   {
     id: 5,
-    year: "2021",
+    year: "2016",
     man_hours: "625,947",
     loss_owrkday_cases: "1",
     recordable_cases: "3",
@@ -61,7 +61,7 @@ export const safetyData = [
   },
   {
     id: 6,
-    year: "2021",
+    year: "2015",
     man_hours: "625,947",
     loss_owrkday_cases: "1",
     recordable_cases: "3",

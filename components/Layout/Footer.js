@@ -13,7 +13,6 @@ function Footer() {
             src="/images/safety-logos.png"
             alt="safety logos"
             layout="fill"
-            // objectFit="cover"
             priority
             className="object-contain lg:object-cover"
           />
@@ -27,19 +26,19 @@ function Footer() {
         <div className="mt-12 flex flex-wrap justify-center gap-2 text-sm text-custom-red capitalize">
           <Link href="/">Home</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Transport Industry</Link>
+          <Link href="/transport-industry">Transport Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Construction Industry</Link>
+          <Link href="/construction-industry">Construction Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Food Industry</Link>
+          <Link href="/food-industry">Food Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Energy Industry</Link>
+          <Link href="/energy-industry">Energy Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">News media Industry</Link>
+          <Link href="/news-media-industry">News media Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Manufacturing Industry</Link>
+          <Link href="/manufacturing-industry">Manufacturing Industry</Link>
           <span className="text-slate-500">|</span>
-          <Link href="#">Mining Industry</Link>
+          <Link href="/mining-industry">Mining Industry</Link>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-2 text-sm text-custom-red capitalize">

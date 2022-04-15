@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { servicesData } from "../../data/servicesData";
 
 function Services() {
@@ -20,13 +21,15 @@ function Services() {
                   height={600}
                   className="object-cover opacity-50 z-30"
                 />
-                <div className="absolute inset-0 z-30 flex flex-col justify-center items-center gap-3 lg:gap-5">
+                <div className="absolute inset-0 z-30 flex flex-col justify-center items-center gap-3 lg:gap-5 capitalize">
                   <h2 className="text-[27px] lg:text-4xl text-white">
                     {service.name}
                   </h2>
-                  <button className="px-6 py-2 text-white hover:text-gray-300 text-[11px] tracking-widest font-bold bg-transparent border-2 border-white hover:border-gray-300 uppercase">
-                    Learn more
-                  </button>
+                  <Link href={service.route} passHref>
+                    <button className="px-6 py-2 text-white hover:text-gray-300 text-[11px] tracking-widest font-bold bg-transparent border-2 border-white hover:border-gray-300 uppercase">
+                      Learn more
+                    </button>
+                  </Link>
                 </div>
               </div>
             );
