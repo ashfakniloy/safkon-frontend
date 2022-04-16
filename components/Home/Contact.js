@@ -4,19 +4,19 @@ import TextField from "../Form/TextField";
 
 function Contact() {
   const initialvalues = {
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     email: "",
     phone: "",
-    message: "",
+    text: "",
   };
 
   const validate = Yup.object({
-    firstName: Yup.string().required("First Name is required"),
-    lastName: Yup.string().required("Last Name is required"),
+    firstname: Yup.string().required("First Name is required"),
+    lastname: Yup.string().required("Last Name is required"),
     email: Yup.string().required("Email is required"),
     phone: Yup.string().required("Phone No is required"),
-    message: Yup.string().required("Message is required"),
+    text: Yup.string().required("Message is required"),
   });
 
   return (
@@ -45,14 +45,14 @@ function Contact() {
                   <div className="col-span-2 sm:col-span-1">
                     <TextField
                       label="First Name *"
-                      name="firstName"
+                      name="firstname"
                       type="text"
                     />
                   </div>
                   <div className="col-span-2 sm:col-span-1">
                     <TextField
                       label="Last Name *"
-                      name="lastName"
+                      name="lastname"
                       type="text"
                     />
                   </div>
@@ -69,7 +69,7 @@ function Contact() {
                   <div className="col-span-2">
                     <TextField
                       label="How Can We Help? *"
-                      name="message"
+                      name="text"
                       type="text"
                       textarea="true"
                     />
