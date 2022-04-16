@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  body {
     @apply font-Poppins text-custom-blue bg-custom-gray;
   }
 }
