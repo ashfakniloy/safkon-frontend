@@ -31,15 +31,15 @@ function Header() {
           <div className="px-4 w-[150px] lg:w-[200px] h-[80px] lg:h-[127px]">
             <Image
               src="/images/logos/logo.png"
+              alt="safkon logo"
               width={264}
               height={191}
-              alt="safkon logo"
             />
           </div>
         </Link>
 
         <button
-          className="lg:hidden  bg-transparent text-custom-orange text-xl p-2"
+          className="lg:hidden  bg-transparent text-xl p-2"
           aria-label="toggle"
           onClick={() => toggleOpen()}
         >

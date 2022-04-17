@@ -12,8 +12,7 @@ function Locations() {
               alt="locations"
               layout="fill"
               objectFit="cover"
-              priority
-              className="object-contain w-screen relative opacity-50 z-30"
+              className="opacity-50"
             />
             <div className="absolute inset-0 z-30 flex flex-col justify-center items-center gap-3 lg:gap-16">
               <h2 className="text-3xl lg:text-[80px] text-white">Locations</h2>

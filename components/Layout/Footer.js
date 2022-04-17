@@ -8,13 +8,12 @@ function Footer() {
         <h1 className="text-xl lg:text-3xl">
           Safety Standards &amp; Certifications
         </h1>
-        <div className="mt-2 lg:mt-8 relative h-[50px] lg:h-[110px]">
+        <div className="mt-2 lg:mt-8 relative h-[50px] lg:h-[115px]">
           <Image
             src="/images/safety-logos.png"
             alt="safety logos"
             layout="fill"
-            priority
-            className="object-contain lg:object-cover"
+            objectFit="contain"
           />
         </div>
 
