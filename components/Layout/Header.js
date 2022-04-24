@@ -24,11 +24,8 @@ function Header() {
   return (
     <div>
       <div className="relative bg-white z-50 lg:px-28 py-5 lg:py-[40px] flex justify-between items-center">
-        {/* <div className="text-5xl font-Montserrat font-bold text-custom-blue">
-          SAFCON
-        </div> */}
         <Link href="/" passHref>
-          <div className="px-4 w-[150px] lg:w-[250px] h-full">
+          <div className="px-4 w-[150px] lg:w-[250px] h-full cursor-pointer">
             <Image
               src="/images/logos/safkon-logo.jpg"
               alt="safkon logo"
