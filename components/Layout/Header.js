@@ -35,6 +35,7 @@ function Header() {
               width={2167}
               height={799}
               layout="responsive"
+              priority
             />
           </div>
         </Link>
