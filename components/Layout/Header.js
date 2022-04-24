@@ -28,12 +28,13 @@ function Header() {
           SAFCON
         </div> */}
         <Link href="/" passHref>
-          <div className="px-4 w-[150px] lg:w-[200px] h-[80px] lg:h-[127px]">
+          <div className="px-4 w-[150px] lg:w-[250px] h-full">
             <Image
-              src="/images/logos/logo.png"
+              src="/images/logos/safkon-logo.jpg"
               alt="safkon logo"
-              width={264}
-              height={191}
+              width={2167}
+              height={799}
+              layout="responsive"
             />
           </div>
         </Link>

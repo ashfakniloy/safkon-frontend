@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Dropdown({ isOpen }) {
   const [showAbout, setShowAbout] = useState(false);
@@ -44,7 +44,7 @@ function Dropdown({ isOpen }) {
         </p>
 
         {showAbout && (
-          <div className="mt-2 mb-4 flex flex-col justify-center items-center gap-3">
+          <div className="h-full mt-2 mb-4 flex flex-col justify-center items-center gap-3">
             <Link href="/about-us">Who we are</Link>
             <Link href="/industries-we-serve">Industries we serve</Link>
             <Link href="/locations">Locations</Link>
@@ -53,7 +53,7 @@ function Dropdown({ isOpen }) {
       </div>
 
       <div
-        className=" cursor-pointer flex flex-col items-center"
+        className="cursor-pointer flex flex-col items-center"
         onClick={() => setShowServices(!showServices)}
       >
         <p className="relative hover:text-custom-red transition duration-200 flex items-center">
