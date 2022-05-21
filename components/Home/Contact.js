@@ -1,23 +1,50 @@
 import * as Yup from "yup";
-import { useFormik, Formik, Form } from "formik";
+import { Formik, Form } from "formik";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import TextField from "../Form/TextField";
+
+const API_URL = "https://safkon-backend.vercel.app";
 
 function Contact() {
   const initialvalues = {
-    firstname: "",
-    lastname: "",
+    // firstname: "",
+    // lastname: "",
+    name: "",
     email: "",
-    phone: "",
-    text: "",
+    number: "",
+    help: "",
   };
 
   const validate = Yup.object({
-    firstname: Yup.string().required("First Name is required"),
-    lastname: Yup.string().required("Last Name is required"),
+    // firstname: Yup.string().required("First Name is required"),
+    // lastname: Yup.string().required("Last Name is required"),
+    name: Yup.string().required("Name is required"),
     email: Yup.string().required("Email is required"),
-    phone: Yup.string().required("Phone No is required"),
-    text: Yup.string().required("Message is required"),
+    number: Yup.string().required("Phone No is required"),
+    help: Yup.string().required("Message is required"),
   });
+
+  const handleSubmit = async (values, formik) => {
+    const { name, email, number, help } = values;
+
+    const res = await fetch(`${API_URL}/saveinfo`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, number, help }),
+    });
+
+    if (res.ok) {
+      toast.success("Message sent successfully!");
+      console.log(res);
+      formik.resetForm();
+    } else {
+      console.log("status", res.status);
+      toast.error("Something went wrong!");
+    }
+  };
 
   return (
     <div className="container w-full lg:w-[65%]  px-4 py-10 overflow-hidden">
@@ -34,27 +61,20 @@ function Contact() {
           <Formik
             initialValues={initialvalues}
             validationSchema={validate}
-            onSubmit={(values, { resetForm }) => {
-              console.log("Submitted values", values);
-              resetForm();
-            }}
+            onSubmit={handleSubmit}
           >
             {(formik) => (
               <Form>
+                <ToastContainer />
                 <div className="grid grid-cols-2 text-sm gap-x-7 gap-y-5 md:gap-y-7">
-                  <div className="col-span-2 sm:col-span-1">
-                    <TextField
-                      label="First Name *"
-                      name="firstname"
-                      type="text"
-                    />
+                  {/* <div className="col-span-2 sm:col-span-1">
+                    <TextField label="First Name *" name="name" type="text" />
                   </div>
                   <div className="col-span-2 sm:col-span-1">
-                    <TextField
-                      label="Last Name *"
-                      name="lastname"
-                      type="text"
-                    />
+                    <TextField label="Last Name *" name="name" type="text" />
+                  </div> */}
+                  <div className="col-span-2 sm:col-span-1">
+                    <TextField label="Name *" name="name" type="text" />
                   </div>
                   <div className="col-span-2 sm:col-span-1">
                     <TextField
@@ -64,12 +84,12 @@ function Contact() {
                     />
                   </div>
                   <div className="col-span-2 sm:col-span-1">
-                    <TextField label="Phone No *" name="phone" type="text" />
+                    <TextField label="Phone No *" name="number" type="tel" />
                   </div>
                   <div className="col-span-2">
                     <TextField
                       label="How Can We Help? *"
-                      name="text"
+                      name="help"
                       type="text"
                       textarea="true"
                     />

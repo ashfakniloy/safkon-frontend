@@ -5,8 +5,8 @@ function Locations() {
   return (
     <div className="container  lg:mb-24 px-4 py-10">
       <div className="border-t pt-10 border-slate-300">
-        <div className="flex flex-col lg:flex-row lg:gap-10">
-          <div className=" relative h-[112px] lg:h-[410px] w-full overflow-hidden text-center bg-black">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:flex-row lg:gap-10">
+          <div className="col-span-2 relative h-[112px] lg:h-[410px] w-full overflow-hidden text-center bg-black">
             <Image
               src="/images/locations.jpg"
               alt="locations"
@@ -24,12 +24,18 @@ function Locations() {
             </div>
           </div>
 
-          <div className="lg:ml-[300px] mt-8 flex flex-col items-end gap-4 lg:gap-10 text-[20px] lg:text-3xl">
-            <p>Theodore, AL</p>
-            <p>Six Mile, SC</p>
-            <p>Summerville,SC</p>
-            <p>Lake City, FL</p>
-            <p>Ruston, LA</p>
+          <div className="col-span-1  mt-10 lg:mt-28 ml-3 flex flex-col items-start lg:items-end text-[20px] lg:text-3xl">
+            <p>
+              Level # 11,
+              <br />
+              House # 53/55,
+              <br />
+              Road # 03,
+              <br />
+              Block # B,
+              <br />
+              Niketon, Gulshan
+            </p>
           </div>
         </div>
       </div>

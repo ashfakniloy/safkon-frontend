@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Agent from "./Agent";
 import Banner from "./Banner";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -18,6 +19,7 @@ function Layout({ children, pageDetails }) {
         <Header />
         <Banner text={text} heading={heading} img={img} />
         {children}
+        <Agent />
         <Footer />
       </div>
     </div>
